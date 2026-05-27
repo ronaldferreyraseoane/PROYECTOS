@@ -1,0 +1,201 @@
+<html>
+<head>
+    <title>MY PROYECTO ANIMACION WEB</title>
+    <ul>
+        <li>
+            <h1>MY PROYECTO TARJETAS</h1>
+        </li>
+    </ul>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .titulo{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: aliceblue;
+            font-size: 35px;
+            font-weight: bold;
+            top: 50%;
+            transform: translateY(200px);
+            animation: titulo 4s forwards;
+            animation-delay: 0s;
+        }
+        @keyframes titulo{
+
+            0%{
+                top: -300px;
+                transform: rotateY(0deg);
+            }
+
+            50%{
+                top: 0px;
+                transform: rotateY(180deg);
+            }
+            100%{
+                top: 0px;
+                transform: rotateY(300deg);
+            }
+        }
+
+        .contenedor{
+            width: 1000px;
+            height: 300px;
+            position: relative;
+            margin: 0 auto;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+    
+        .marco1{
+            width:  200px;
+            height: 300px;
+            background-color: red;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            animation: marco1 2s 1 forwards 1s;
+            background-image: url(img/tarjetas/HTML.png);
+            background-size: cover;
+        }
+        @keyframes marco1 {
+            0% { 
+                top: -350px; 
+                left: -200px; 
+                transform: rotateY(90deg) rotateZ(-20deg); 
+                opacity: 0; 
+            }
+            50% { 
+                top: 20px; 
+                left: 10px; 
+                transform: rotateY(45deg); 
+                opacity: 1; 
+            }
+            100% { 
+                top: 0px; 
+                left: 0px; 
+                transform: rotateY(0deg); 
+            }
+        }
+        .marco2{
+            width:  200px;
+            height: 300px;
+            background-color: green;
+            position: absolute;
+            top: 300px;
+            left: 200px;
+            animation: marco2 2s 1 forwards 2s;
+            background-image: url(img/tarjetas/CSS.png);
+            background-size: cover;
+
+        }
+        @keyframes marco2 {
+            0% { top: -350px; transform: rotateX(90deg); opacity: 0; }
+            50% { top: -20px; transform: rotateX(-20deg); opacity: 1; }
+            100% { top: 0px; transform: rotateX(0deg); }
+        }
+        .marco3{
+            width:  200px;
+            height: 300px;
+            background-color: yellow;
+            position: absolute;
+            top: 300px;
+            left: 400px;
+            animation: marco3 2s 1 forwards 4s;
+            background-image: url(img/tarjetas/PHP.png);
+            background-size: cover;
+
+        }
+        @keyframes marco3{
+            0%{ 
+                top: 300px; 
+                left: 0px; 
+                opacity: 0; 
+            }
+            50%{ 
+                top: -50px; 
+                left: 200px; 
+                opacity: 1; 
+            }
+            100%{ 
+                top: 0px; 
+                left: 400px; 
+            }
+        }
+        .marco4{
+            width:  200px;
+            height: 300px;
+            background-color: yellow;
+            position: absolute;
+            top: 300px;
+            left: 600px;
+            animation: marco4 2s 1 forwards 6s;
+            background-image: url(img/tarjetas/JS.png);
+            background-size: cover;
+
+        }
+        @keyframes marco4{
+            0%{
+                top: 300px;
+                transform: rotate(20deg);
+            }
+            100%{
+                top: 0px;
+                transform: rotate(0deg);
+            }
+        }
+        .marco5{
+            width:  200px;
+            height: 300px;
+            background-color: yellow;
+            position: absolute;
+            top: 300px;
+            left: 800px;
+            animation: marco5 2s 1 forwards 8s;
+            background-image: url(img/tarjetas/BOOPSTRAP.png);
+            background-size: cover;
+
+        }
+        @keyframes marco5{
+            0%{
+                top: -300px;
+                left: 800px;
+                transform: rotateX(180deg);
+
+
+            }
+            50%{
+                top: 300px;
+                left: 800px;
+                transform: rotateY(-180deg);
+
+            }
+            100%{
+                top: 0px;
+                left: 800px;
+
+            }
+        }
+        .marco1, .marco2, .marco3, .marco4, .marco5{
+                box-shadow: 0px 0px 20px rgb(4, 83, 253);
+            }
+
+    </style>
+
+</head>
+    <body>
+        <div class="contenedor">
+            <div class="marco1"></div>
+            <div class="marco2"></div>
+            <div class="marco3"></div>
+            <div class="marco4"></div>
+            <div class="marco5"></div>
+            <div class="titulo">
+                TECNOLOGIA DE DESAROLLO WEB Z
+            </div>
+
+        </div>
+    </body>
+</html>

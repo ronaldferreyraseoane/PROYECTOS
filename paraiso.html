@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>castillo</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            overflow: hidden; 
+        }
+
+        .contenedor {
+            width: 800px;
+            height: 450px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden; 
+            background-color: #02080c;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 20px 50px rgba(0, 255, 255, 0.1), inset 0 0 100px rgba(0,0,0,0.5);
+        }
+        .capa {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+            pointer-events: none; 
+        }
+        .fondo {
+            width: 110%; 
+            z-index: 1;
+            background-image: url('img/castillo.png');
+            clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+            animation: parallaxFondo 15s ease-in-out infinite alternate;
+        }
+        @keyframes parallaxFondo {
+            0% { 
+                transform: translateX(0); 
+            }
+            100% { 
+                transform: translateX(-9%); 
+            }
+        }
+
+        .hongos {
+            width: 120%;
+            z-index: 2;
+            background-image: url('img/arboles.png');
+            clip-path: polygon(0 100%, 15% 45%, 25% 65%, 40% 30%, 55% 70%, 70% 20%, 85% 60%, 100% 100%);
+            animation: parallaxHongos 15s ease-in-out infinite alternate;
+        }
+        @keyframes parallaxHongos {
+            0% { 
+                transform: translateX(0); 
+            }
+            100% { 
+                transform: translateX(-16%); 
+            }
+        }
+        .arco {
+            width: 135%;
+            z-index: 3;
+            background-image: url('img/pasto.png');
+            clip-path: polygon(0% 100%, 20% 80%, 35% 95%, 50% 60%, 65% 95%, 80% 80%, 100% 100%);
+            
+            animation: parallaxArco 15s ease-in-out infinite alternate;
+        }
+        @keyframes parallaxArco {
+            0% { 
+                transform: translateX(0);
+             }
+            100% { 
+                transform: translateX(-26%); 
+            }
+        }
+        .cueva {
+            width: 150%; 
+            z-index: 4;
+            background-image: url('img/roca.png');
+            clip-path: polygon(
+                0% 0%, 0% 100%, 10% 100%, 15% 70%, 30% 85%, 45% 65%, 55% 85%, 70% 65%, 85% 90%, 90% 100%, 100% 100%, 100% 0%,
+                85% 0%, 70% 20%, 55% 5%, 45% 25%, 30% 10%, 15% 30%, 10% 0%
+            );
+            animation: parallaxCueva 15s ease-in-out infinite alternate;
+        }
+        @keyframes parallaxCueva {
+            0% { 
+                transform: translateX(0); 
+            }
+            100% { 
+                transform: translateX(-33%); 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="capa fondo"></div>
+        <div class="capa hongos"></div>
+        <div class="capa arco"></div>
+        <div class="capa cueva"></div>
+    </div>
+
+</body>
+</html>

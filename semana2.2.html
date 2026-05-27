@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>ANIMACIONES CSS - ANIMATION</title>
+    <style>
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(226, 0, 87);
+            text-align: center;
+
+            animation-name: titulo; /*titulo para la animacion*/
+            animation-duration: 3s; /*duracion de la animacion q facil*/
+            animation-iteration-count: 1; /*cant. de veces q se realiza la animacion*/
+            animation-fill-mode: backwards; /*indicas cual es el ultimo estado que se queda*/
+        }
+        @keyframes titulo{
+            from{
+                color: rgb(238, 7, 169);
+                transform: translateX(500px);
+            }
+            to{
+                color: rgb(255, 60, 0);
+                transform: translateX(0);
+            }
+            
+        }
+
+        h3 {
+            text-align: center;
+            color: rgb(21, 5, 252);
+            font-family: "century gothic";
+            font-weight: bold;
+            animation-name: texto;
+            animation-duration: 4s;
+            animation-iteration-count: 1; /* Controla cuantas veces se repite la animacion */
+            animation-timing-function: ease-in-outc ; /* Define el ritmo o la velocidad de la animación */
+            animation-delay: 0s; /* cronómetro de espera */
+}
+
+        @keyframes texto {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            text-align: center;
+            font-family: "century gothic";
+            font-weight: bold;
+            color: darkblue;
+            animation-name: texto;
+            animation-duration: 4s;
+            animation-iteration-count: 1; /* Controla cuantas veces se repite la animacion */
+            animation-timing-function: ease-in-outc ; /* Define el ritmo o la velocidad de la animación */
+            animation-delay: 0s; /* cronómetro de espera */
+}
+
+        @keyframes texto {
+            from {
+                opacity: 0;
+                margin-top: 100px;
+            }
+            to {
+                opacity: 1;
+                margin-top: 0px;
+            }
+        }
+
+        img{
+            height: 400px;
+            width: 400px;
+            display: block;/*centrar la imagen*/
+            margin: auto; /*centrar imagen*/
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-delay: 3s;
+            animation-name: imagen;
+            animation-iteration-count: 1;
+            animation-duration: 2s;
+        }
+
+        @keyframes imagen{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        body{
+            background-color:rgb(250, 141, 77)
+        }
+        
+
+    </style>
+</head>
+<body>  
+    <h1>DRA. LISA SU</h1>
+    <h3>Presidenta y directora ejecutiva</h3>
+    <img src="img/logo 3.png">
+    <p>Tras graduarse en la prestigiosa Bronx High School of Science de Nueva York, una escuela pública specializada, estudió ingeniería eléctrica en el Instituto Tecnológico de Massachusetts (MIT).</p>
+    <p>Como presidenta y directora ejecutiva de AMD, la Dra.<br> Lisa Su ha liderado la transformación de la compañía en el líder de la <br>industria en computación adaptativa y de alto rendimiento , <br> ayudando a resolver los desafíos más importantes del mundo mediante el suministro de soluciones<br> de computación e inteligencia artificial de próxima generación</p>
+    
+</body>
+</html>

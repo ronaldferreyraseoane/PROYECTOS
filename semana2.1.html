@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>ANIMACIONES CSS - ANIMATION</title>
+    <style>
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(80, 11, 241);
+            text-align: center;
+
+            animation-name: titulo; /*titulo para la animacion*/
+            animation-duration: 3s; /*duracion de la animacion q facil*/
+            animation-iteration-count: 1; /*cant. de veces q se realiza la animacion*/
+            animation-fill-mode: backwards; /*indicas cual es el ultimo estado que se queda*/
+        }
+        @keyframes titulo{
+            from{
+                color: rgb(6, 222, 238);
+                transform: translateX(500px);
+            }
+            to{
+                color: rgb(255, 0, 119);
+                transform: translateX(0);
+            }
+            
+        }
+
+        p {
+            text-align: center;
+            font-family: "century gothic";
+            font-weight: bold;
+            animation-name: texto;
+            animation-duration: 4s;
+            animation-iteration-count: 1; 
+            animation-timing-function: ease-in-outc ;
+            animation-delay: 0s; 
+}
+
+        @keyframes texto {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        img{
+            height: 400px;
+            width: 400px;
+            display: block;
+            margin: auto; 
+            opacity: 0;
+            animation-name: imagen;
+
+            animation: imagen 3s 4s 1 forwards;
+        }
+
+        @keyframes imagen{
+            from{
+                opacity: 0;
+                transform: translateY(0);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(15px);
+            }
+        }
+        body{
+            background-color:cadetblue
+        }
+        
+
+    </style>
+</head>
+<body>  
+    <img src="img/logo 1.png">
+    <h1>SAM ALTMAN</h1>
+    <P>Sam Altman (nacido el 22 de abril de 1985)<br> es un empresario e inversor estadounidense, reconocido principalmente como el CEO de OpenAI, la empresa desarrolladora de ChatGPT.<br> Fue presidente de la aceleradora de startups Y Combinator y es considerado una figura clave en el avance de la inteligencia artificial moderna.</P>
+    <img src="img/logo2.png">
+    <p>Sam Altman no construyó su fortuna a través de un solo éxito masivo, sino mediante una combinación estratégica de emprendimiento temprano e inversiones astutas en el ecosistema tecnológico.<br> Su primer gran movimiento fue la venta de Loopt, una aplicación de redes sociales basada en la ubicación, por unos 43 millones de dólares en 2012.</p>
+    
+</body>
+</html>

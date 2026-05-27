@@ -1,0 +1,134 @@
+<html>
+<head>
+    <title>Animacion 3 CSS</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .contenedor{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: black;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .cuadrito{
+            width: 100px;
+            height: 100px;
+            background-color: transparent;
+            position: absolute;
+            left: 50%; 
+            top: 50%;
+            animation: levitacion 2s infinite ease-in-out;
+        }       
+        
+
+        @keyframes levitacion {
+            0%, 100% {
+                transform: translateY(0); 
+            }
+            50% {
+                transform: translateY(-40px);
+            }
+        }
+
+        .fuego2, .fuego3, .fuego4, .fuego5, .fuego6, .fuego7{
+            width: 3px;
+            height: 3px;
+            background-color: transparent;
+            position: absolute;
+            animation: goku 3s infinite linear;
+        }
+
+        .fuego2{ 
+            top: 10px; 
+            animation-duration: 4s; 
+        }
+        .fuego3{ 
+            top: 120px; 
+            animation-duration: 2s; 
+        }
+        .fuego4{ 
+            top: 79px; 
+            animation-duration: 1s; 
+        }
+        .fuego5{ 
+            top: 30px; 
+            animation-duration: 3s; 
+        }
+        .fuego6{ 
+            top: 160px; 
+            animation-duration: 2.5s;
+        }
+        .fuego7{ 
+            top: 90px; 
+            animation-duration: 1.5s;
+        }
+
+        @keyframes goku{
+            
+            from{
+                left: -50px;
+                transform: rotate(45deg);
+                opacity: 0.5;
+            }
+            to{
+                left: 450px;
+                transform: rotate(45deg);
+            }
+        }
+
+        .cuadrito img{
+            width: 50px;
+            height: 50px;
+            transform: scaleX(-1);
+        }
+        .fuego2 img{
+            width: 50px;
+            height: 50px;
+            transform: scaleX(1);
+        }
+        .fuego3 img{
+            width: 50px;
+            height: 50px;
+            transform: scaleX(1);
+        }
+        .fuego4 img{
+            width: 50px;
+            height: 50px;
+            transform: scaleX(1);
+        }
+        .fuego5 img{
+            width: 50px;
+            height: 50px;
+            transform: scaleX(1);
+        }
+        .fuego6 img{
+            width: 50px;
+            height: 50px;
+            transform: scaleX(1);
+        }
+        .fuego7 img{ 
+            width: 50px;
+            height: 50px;
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="cuadrito"><img src="img/goku/goku.gif" alt=""></div>
+        <div class="fuego2"><img src="img/goku/fire.gif" alt=""></div>
+        <div class="fuego3"><img src="img/goku/fire.gif" alt=""></div>
+        <div class="fuego4"><img src="img/goku/fire.gif" alt=""></div>
+        <div class="fuego5"><img src="img/goku/fire.gif" alt=""></div>
+        <div class="fuego6"><img src="img/goku/fire.gif" alt=""></div>
+        <div class="fuego7"><img src="img/goku/fire.gif" alt=""></div>
+    </div>
+</body>
+</html>

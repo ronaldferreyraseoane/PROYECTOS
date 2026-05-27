@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicie Juego</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffcc00;
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        
+        button {
+            background: none;
+            border: none;
+            color: #ffcc00;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5rem;
+            text-shadow: 4px 4px 0px #ff0055;
+            cursor: pointer;
+            animation: parpadeo 1s infinite;
+        }
+        
+        p {
+            color: #00ffcc;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio src="music/sonido2.mp3" autoplay loop></audio>
+
+    <form action="proyectos.html">
+        <button type="submit" autofocus>INSERTE MONEDA</button>
+        <p>PRESIONA [ENTER]</p>
+    </form>
+
+</body>
+</html>
