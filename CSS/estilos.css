@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black; 
+}
+.contenedor{
+    width: 500px;
+    height: 800px;
+    border: 1px solid white;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.cielo{
+    position: absolute;
+    left: -200px;
+    top: -50px;
+    filter: blur(5px);
+    animation: cielo 30s 1 forwards;
+
+}
+@keyframes cielo {
+    from{
+        scale: 100%;
+        filter: blur(5px);
+    }
+    to{
+        scale: 130%;
+        filter: blur(0px);
+    }
+}
+
+.montaña{
+    position: absolute;
+    left: -600px;
+    animation: montaña 20s 1 forwards;
+}
+@keyframes montaña {
+    from{
+        top:0px;
+        scale:100%;
+        filter:blur(5px);
+    }
+    to{
+        top:-50px;
+        scale: 105%;
+        filter: blur(0px);
+    }
+    
+}
+.persona{
+    position: absolute;
+    width: 800px;
+    left: -150px;
+    top: 300px;
+    animation: persona 10s 1 forwards;
+}
+@keyframes persona {
+    from{
+
+        filter: blur(5px);
+
+    }
+    to{
+        scale: 92%;
+
+    }
+
+    
+}
+.neblina{
+    position: relative;
+    width: 1000px;
+    left: -150px;;
+    top: 400px;
+    animation: neblina 40s 1 forwards;
+}
+@keyframes neblina {
+    from{
+        left: -500px;
+        filter: blur(5px);
+
+    }
+    to{
+        
+        filter: blur(0px);
+    }
+    
+}
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 500px; 
+    z-index: 3; 
+    display: flex;
+    justify-content: center;
+    animation: hola 14s 1 forwards;
+}
+@keyframes hola {
+    from{
+        scale: px;
+
+    }
+    to{
+        top: 34%;
+        scale: 100px;
+
+    }
+    
+}
+
+
+svg path {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: nombreAnimacion 4s ease-in-out 1 forwards;
+    
+}
+@keyframes nombreAnimacion {
+    0%{
+        stroke-dashoffset: 50;
+    }
+    80%{
+        fill: transparent;
+    }
+    100%{
+        fill: #fff;
+        stroke-dashoffset: 0;
+    }
+    
+}
